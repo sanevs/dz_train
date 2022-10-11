@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Trains</title>
+    <style type="text/css">
+        body{
+            background: DodgerBlue;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="/trains/addForm">Add train</a>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Start</td>
+            <td>Stop</td>
+            <td>Distance</td>
+            <td>Quantity</td>
+            <td>Location</td>
+            <td>Equipment</td>
+        </tr>
+        <tr th:each="train: ${trains}">
+            <td th:text="${train.id}" />
+            <td th:text="${train.start}" />
+            <td th:text="${train.stop}" />
+            <td th:text="${train.distance}" />
+            <td th:text="${train.quantity}" />
+            <td th:text="${train.location}" />
+            <td th:text="${train.hasEquipment}" />
+            <br>
+        </tr>
+    </table>
+</body>
+</html>

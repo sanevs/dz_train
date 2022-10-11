@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="application/json; charset=UTF-8" />
+    <title>Add form</title>
+    <style type="text/css">
+        body{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <a href="/trains/">Back</a>
+    <h2>Add form</h2>
+    <form action="/trains/add"
+          method="get" enctype='application/json'>
+        <label>Distance: </label>
+        <input type="number" name="distance"><br>
+
+        <label>Equipment:</label>
+        <input type="checkbox" name="has_equipment" checked><br>
+
+        <label>Location:</label>
+        <input type="text" name="location"><br>
+
+        <label>Quantity:</label>
+        <input type="number" name="quantity"><br>
+
+        <label>Start:</label>
+        <input type="datetime-local" name="start" min="2022-10-01T08:00"><br>
+
+        <label>Stop:</label>
+        <input type="datetime-local" name="stop"><br>
+
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
